@@ -1,0 +1,7 @@
+
+{% extends "blog/base.html" %}
+
+{% block content %}
+{% block title %}<title>Mafia Test - About</title>{% endblock %}
+    <h1>About Page</h1>
+{% endblock content %}

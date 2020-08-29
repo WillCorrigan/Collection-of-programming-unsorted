@@ -1,0 +1,65 @@
+
+{% extends "forum/base.html" %}
+
+{% block content %}
+{% block title %}<title>Mafia Test - Forum</title>{% endblock %}
+
+
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Board</a></li>
+      </ol>
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark bg-danger">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Topics</th>
+          </tr>
+        </thead>
+      
+      <tbody>
+        {% for board in boards %}
+          <tr>
+            <td>
+              <a href="{% url 'forum-topics' board.pk %}">{{ board.name }}</a>
+            </td>
+            <td><small style="color: #888">{{ board.description }}</small></td>
+            <td>{{ board.topics.count }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+
+      {% if is_paginated %}
+        {% if page_obj.has_previous %}
+          <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+          {% if page_obj.number == num %}
+            <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number  }}">&raquo;</a>
+          <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+
+      {% endif %}
+{% endblock content %}
+
+
+
+
+
+
+

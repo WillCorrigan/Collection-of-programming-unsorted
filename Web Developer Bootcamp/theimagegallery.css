@@ -1,0 +1,19 @@
+body {
+    padding-top: 70px;
+}
+
+.material-icons {
+    color: white;
+    padding-right: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#jumboone {
+    color: black;
+    font-size: 40px;
+
+
+}

@@ -1,0 +1,766 @@
+@media only screen and (min-width: 768px) {
+
+
+
+body {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    height: 100%
+}
+
+.bg-steel{
+    background-color: #070c24;
+}
+
+.table .thead-dark th{
+    border-bottom: 1rem solid white;
+    
+}
+
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 3rem;
+  width: 100%;
+  background-color: #070c24;
+  color: white;
+  text-align: center;
+}
+
+
+
+#testpage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3.5rem;
+}
+
+#reply-button {
+
+  float: left;
+  align-items: left;
+  justify-content: left;
+  margin-right: 25%; 
+}
+
+.content-section{
+    padding-right: 5rem;
+}
+
+.th-stretch{
+    text-align: center;
+}
+
+.img-thumbnail{
+width: 100px;
+height: 100px;
+justify-content: center;
+text-align: center;
+}
+
+
+div.post-username{
+    text-align: center;
+    justify-content: center;
+
+
+}
+
+div.post-avatar{
+    text-align: center;
+    justify-content: center;
+}
+
+.col-md-2, .profile{
+    border-width: 2px;
+    border-color: black;
+}
+
+.col-md-10{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}
+
+.row .testpost1{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+
+
+#postlist{
+    clear: both;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    position: relative;
+    height: 1%;
+    zoom: 1;
+
+
+}
+
+.posts {
+    margin: 12px 0;
+}
+
+
+.postlistlong.postlistcontainer{
+    margin-bottom: 12px;
+    display: block;
+    width: 100%;
+    clear: both;
+    position: relative;
+    float: left;
+    color: #3e3e3e;
+    border: 1px solid #e4e4e4;
+
+}
+
+.postlistlong.postlistcontainer .post-info {
+    background: #070c24 none;
+    background-image: none;
+    border: 1px solid white;
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    color: #ffffff;
+    margin: -1px -1px 0;
+    font: normal 14px;
+    padding: 9px 0;
+}
+
+.postlistlong.postlistcontainer .post-info .post-date-1{
+    background: transparent url(https://pngimage.net/wp-content/uploads/2018/06/pen-icon-white-png-6.png) no-repeat center left;
+    background-size: 10px 10px;
+    display: block;
+    float: left;
+    clear: right;
+    width: 49%;
+    margin-left: 10px;
+    font: normal 14px;
+    padding-left: 15px;
+
+}
+
+.postlistlong.postlistcontainer .post-controls-header {
+    position: absolute;
+    color: #ffffff;
+    right: 0;
+    top: 0;
+    width: 50%;
+    padding: 10px 12px 0;
+    text-align: right;
+    font: normal 14px;
+    vertical-align: middle;
+}
+
+.postlistlong.postlistcontainer .post-controls-header a{
+    color: white;
+    top: -2px;
+    position: relative;
+
+}
+.postlistlong.postlistcontainer .post-controls-header a.post-user-filter{
+    margin-right: .2em;
+
+}
+
+
+.postlistlong.postlistcontainer .post-details{
+    float: left;
+    width: 100%;
+    background: #f2f2f2 none;
+    background-image: none;
+}
+
+.postlistlong.postlistcontainer .post-details .user-info{
+    float: left;
+    position: relative;
+    width: 176px;
+    padding: 2px 12px 6px;
+    font-size: 11px;
+    display: block;
+    background: #f2f2f2 none;
+    clear: both;
+
+}
+
+.postlistlong.postlistcontainer .post-details .user-info .username-container{
+    margin-bottom: 6px; 
+    font-size: 15px;
+    text-align: left;
+
+}
+
+.postlistlong.postlistcontainer .post-details .user-info .username-container .username{
+    clear: right;
+    font-size: 20px;
+    width: auto;
+    max-width: 156px;
+    word-wrap: break-word;
+
+
+}
+
+.postlistlong.postlistcontainer .post-details .user-info img.img-thumbnail{
+
+    display: block;
+    margin: 4px auto 0;
+    text-align: left;
+    width: 100px;
+    height: 100px;
+    float: left;
+    clear: both;
+
+    }
+
+
+.postlistlong.postlistcontainer .post-details .user-info .user-name-group{
+    font-size: 11px;
+    display: block;
+    clear: both;
+}
+
+.postlistlong.postlistcontainer .post-details .user-info .user-stats{
+    width: 176px;
+    float: left;
+    font-size: 11px;
+    margin: 6px 0;
+    display: block;
+    height: auto !important;
+
+    }
+
+.postlistlong.postlistcontainer .post-details .user-info .user-stats dt{
+    max-width: 60px !important;
+    float: left;
+    text-align: left;
+    margin-right: 12px;
+    margin-left: 0;
+    min-width: 60px;
+    width: auto !important;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-details .user-info .user-stats dd{
+padding-bottom: 3px;
+
+}
+
+
+.postlistlong.postlistcontainer .post-details .post-content{
+    margin-left: 200px;
+    border-left: 1px solid #efefef;
+    background: #ffffff none;
+    background-image: none;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+.postlistlong.postlistcontainer .post-details .post-content .post-row{
+    padding: 6px 12px 12px;
+    overflow: auto;
+
+    }
+
+.postlistlong.postlistcontainer .post-details .post-content .post-row .content{
+    margin: 0;
+    padding: 0;
+
+    }
+
+
+.postlistlong.postlistcontainer .post-details .post-content .post-row .content .content-message p{
+    overflow: visible !important;
+    word-wrap: normal;
+    margin: 0;
+    padding: 0;
+
+}
+
+.postlistlong.postlistcontainer .post-details .post-content .after-post{
+    position: relative;
+    width: 100%;
+    clear: both;
+    }
+
+
+.postlistlong.postlistcontainer .post-details .post-content .clear-post{
+    clear: both;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-footer {
+    display: block;
+    position: relative;
+    right: 0;
+    float: left;
+    clear: both;
+    background: white transparent;
+    font: bold 11px;
+    width: 100%;
+
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer{
+    padding: 7px 0 8px;
+    display: block;
+    background: #f2f2f2 none;
+    font: bold 11px;
+    width: 100%;
+    margin-right: 10px;
+    border-top: 1px solid #e4e4e4;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer .user-controls-thread{
+    float: right;
+    padding-right: 12px;
+    text-align: right;
+    width: 50%;
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer .user-controls-thread .vote-counter{
+    padding: 0px 0px 0px 0px;
+    padding-left: 1px;
+    border: 0px solid #e4e4e4;
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer a{
+    color: #4e4e4e;
+    display: inline-block;
+    margin-left: 5px;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer .seperator{
+    border-right: 1px solid #DADADA;
+    display: inline;
+    margin: 0 5px;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+body {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    height: 100%;
+    font-size: 11px;
+}
+
+.bg-steel{
+    background-color: #070c24;
+}
+
+.table .thead-dark th{
+    border-bottom: 1rem solid white;
+    
+}
+
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 3rem;
+  width: 100%;
+  background-color: #070c24;
+  color: white;
+  text-align: center;
+}
+
+
+
+#testpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.content-section{
+    padding-right: 5rem;
+}
+
+.th-stretch{
+    text-align: center;
+}
+
+.img-thumbnail{
+width: 100px;
+height: 100px;
+justify-content: center;
+text-align: center;
+}
+
+
+div.post-username{
+    text-align: center;
+    justify-content: center;
+
+
+}
+
+div.post-avatar{
+    text-align: center;
+    justify-content: center;
+}
+
+.col-md-2, .profile{
+    border-width: 2px;
+    border-color: black;
+}
+
+
+.content-section{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.col-md-10{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}
+
+.row .testpost1{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+
+
+#postlist{
+    clear: both;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    position: relative;
+    height: 1%;
+    zoom: 1;
+
+
+}
+
+.posts {
+    margin: 12px 0;
+    padding-left: 0
+
+}
+
+
+.postlistlong.postlistcontainer{
+    margin-bottom: 12px;
+    display: block;
+    width: 100%;
+    clear: both;
+    position: relative;
+    float: left;
+    color: #3e3e3e;
+    border: 1px solid #e4e4e4;
+
+}
+
+.postlistlong.postlistcontainer .post-info {
+    background: #070c24 none;
+    background-image: none;
+    border: 1px solid white;
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    color: #ffffff;
+    margin: -1px -1px 0;
+    font: normal 14px;
+    padding: 9px 0;
+}
+
+.postlistlong.postlistcontainer .post-info .post-date-1{
+    background: transparent url(https://pngimage.net/wp-content/uploads/2018/06/pen-icon-white-png-6.png) no-repeat center left;
+    background-size: 10px 10px;
+    display: block;
+    float: left;
+    clear: right;
+    width: 49%;
+    margin-left: 10px;
+    font: normal 14px;
+    padding-left: 15px;
+
+}
+
+.postlistlong.postlistcontainer .post-controls-header {
+    position: absolute;
+    color: #ffffff;
+    right: 0;
+    top: 0;
+    width: 50%;
+    padding: 10px 12px 0;
+    text-align: right;
+    font: normal 14px;
+    vertical-align: middle;
+}
+
+.postlistlong.postlistcontainer .post-controls-header a{
+    color: white;
+    top: -2px;
+    position: relative;
+
+}
+.postlistlong.postlistcontainer .post-controls-header a.post-user-filter{
+    margin-right: .2em;
+
+}
+
+
+.postlistlong.postlistcontainer .post-details{
+    float: left;
+    width: 100%;
+    background: #f2f2f2 none;
+    background-image: none;
+}
+
+.postlistlong.postlistcontainer .post-details .user-info{
+    position: relative;
+    width: 100%;
+    padding: 2px 12px 6px;
+    font-size: 11px;
+    display: flex;
+    background: #f2f2f2 none;
+    clear: both;
+    height: 2.5rem;
+
+}
+
+.postlistlong.postlistcontainer .post-details .user-info .username-container{
+    margin-bottom: 6px; 
+    font-size: 11px;
+    text-align: left;
+    order: 2;
+    padding-right: 12px;
+    padding-left: 12px;
+    max-width: 75px !important;
+}
+
+.postlistlong.postlistcontainer .post-details .user-info .username-container .username{
+    clear: right;
+    font-size: 11px;
+    width: auto;
+    max-width: 156px;
+    word-wrap: break-word;
+
+}
+
+.postlistlong.postlistcontainer .post-details .user-info img.img-thumbnail{
+
+    display: block;
+    margin: 4px auto 0;
+    text-align: left;
+    width: 25px;
+    height: 25px;
+    float: left;
+    clear: both;
+    order: 1;
+    }
+
+
+.postlistlong.postlistcontainer .post-details .user-info .user-name-group{
+    font-size: 11px;
+    display: block;
+    clear: both;
+    order: 3;
+    padding-right: 12px;
+    padding-left: 12px;
+    max-width: 80px !important;
+    word-wrap: break-word;
+}
+
+.postlistlong.postlistcontainer .post-details .user-info .user-stats{
+    display: inline-flex;
+    height: auto !important;
+    order: 4;
+    }
+
+.postlistlong.postlistcontainer .post-details .user-info .user-stats dt{
+    max-width: 60px !important;
+    float: left;
+    text-align: left;
+    margin-left: 0;
+    padding-right: 4px;
+    width: auto !important;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-details .user-info .user-stats dd{
+padding-bottom: 3px;
+
+}
+
+
+.postlistlong.postlistcontainer .post-details .post-content{
+    border-left: 1px solid #efefef;
+    background: #ffffff none;
+    background-image: none;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+.postlistlong.postlistcontainer .post-details .post-content .post-row{
+    padding: 6px 12px 12px;
+    overflow: auto;
+
+    }
+
+.postlistlong.postlistcontainer .post-details .post-content .post-row .content{
+    margin: 0;
+    padding: 0;
+
+    }
+
+
+.postlistlong.postlistcontainer .post-details .post-content .post-row .content .content-message p{
+    overflow: visible !important;
+    word-wrap: normal;
+    margin: 0;
+    padding: 0;
+
+}
+
+.postlistlong.postlistcontainer .post-details .post-content .after-post{
+    position: relative;
+    width: 100%;
+    clear: both;
+    }
+
+
+.postlistlong.postlistcontainer .post-details .post-content .clear-post{
+    clear: both;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-footer {
+    display: block;
+    position: relative;
+    right: 0;
+    float: left;
+    clear: both;
+    background: white transparent;
+    font: bold 11px;
+    width: 100%;
+
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer{
+    padding: 7px 0 8px;
+    display: block;
+    background: #f2f2f2 none;
+    font: bold 11px;
+    width: 100%;
+    margin-right: 10px;
+    border-top: 1px solid #e4e4e4;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer .user-controls-thread{
+    float: right;
+    padding-right: 12px;
+    text-align: right;
+    width: 50%;
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer .user-controls-thread .vote-counter{
+    padding: 0px 0px 0px 0px;
+    padding-left: 1px;
+    border: 0px solid #e4e4e4;
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer a{
+    color: #4e4e4e;
+    display: inline-block;
+    margin-left: 5px;
+
+
+    }
+
+.postlistlong.postlistcontainer .post-footer .post-controls-footer .seperator{
+    border-right: 1px solid #DADADA;
+    display: inline;
+    margin: 0 5px;
+
+    }
+
+
+}
+
+
+    }
+
+
+
+
+
+    

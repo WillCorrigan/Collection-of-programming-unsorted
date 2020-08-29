@@ -1,0 +1,132 @@
+{% extends "forum/base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{%static 'forum/testforum.css'%}">
+{%endblock%}
+
+{% load static %}
+
+{% block content %}
+{% block title %}<title>Mafia Test - Forum</title>{% endblock %}
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-8">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'forum-home' %}">Board</a></li>
+                    <li class="breadcrumb-item"><a href="#">Topics</a></li>
+                </ol>
+            </nav>
+
+          <div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark bg-warning">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Topics</th>
+          </tr>
+        </thead>
+      
+    <tbody>
+            {% for topic in topics %}
+          <tr>
+            <td class="testwidthtd">
+                <img class="rounded-circle article-img" src="{% static 'forum/forum-icon-5.jpg' %}" alt="My image" style="width:50px,height:50px;">
+            </td>
+            <td>
+              <a href="{% url 'forum-thread' board.pk topic.pk %}">{{ topic.title }}</a>
+            </td>
+            <td><small style="color: #888">{{ topic.author }}</small></td>
+            <td>{{ board.topics.count }}</td>
+          </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</div>
+</div>
+
+
+
+        </div>
+
+        <div class="col-md-3">
+            <div class="content-section">
+                <h3>Our Sidebar</h3>
+                <p class='text-muted'>You can put any information here you'd like.
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-light">Latest Posts</li>
+                    <li class="list-group-item list-group-item-light">Announcements</li>
+                    <li class="list-group-item list-group-item-light">Calendars</li>
+                    <li class="list-group-item list-group-item-light">etc</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<div class="row">
+    <div id="testpage" class="col-md-8">
+        {% if is_paginated %}
+        {% if page_obj.has_previous %}
+          <a class="btn btn-outline-primary mb-4" href="?page=1">First</a>
+          <a class="btn btn-outline-primary mb-4" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+          {% if page_obj.number == num %}
+            <a class="btn btn-primary mb-4" href="?page={{ num }}">{{ num }}</a>
+          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a class="btn btn-outline-primary mb-4" href="?page={{ num }}">{{ num }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <a class="btn btn-outline-primary mb-4" href="?page={{ page_obj.next_page_number  }}">&raquo;</a>
+          <a class="btn btn-outline-primary mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+
+      {% endif %}
+
+    </div>       
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

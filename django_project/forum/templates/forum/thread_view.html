@@ -1,0 +1,147 @@
+{% extends "forum/base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" type="text/css" href="{%static 'forum/threadview.css'%}">
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+{% block title %}<title>Mafia Test - Forum</title>{% endblock %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'forum-home' %}">Board</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'forum-topics' topic.board.pk  %}">Topics</a></li>
+                            <li class="breadcrumb-item"><a href="#">{{ topic.title }}</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div id="postlist" class="postlist test">
+                <ol id="posts" class="posts" start="1">
+                {% for comment in comments %}
+
+                    <li id="{{ page_obj.start_index|add:forloop.counter0 }}" class="postlistlong postlistcontainer">
+                        <div class="post-info">
+                            <span class="post-date-1">
+                                <span class="post-date-2">{{ comment.created_at }}</span>
+
+                            </span>
+                            <span class="post-controls-header">
+                                <a class="post-user-filter" href="#">Filter</a>
+                                <a name="{{ page_obj.start_index|add:forloop.counter0 }}" class="postcounter" href="{% url 'forum-thread' topic.board.pk topic.pk%}?page={{ page_obj.number}}#{{ page_obj.start_index|add:forloop.counter0 }}" title="link to post">#{{ page_obj.start_index|add:forloop.counter0 }}</a>
+                            </span>
+                        </div>
+                        <div class="post-details">
+                            <div class="user-info">
+                                <div class="username-container">
+                                    <span class="username">{{comment.created_by}}</span>
+                                    
+
+                                </div>
+                                <img class="img-thumbnail" src="{{ comment.created_by.profile.image.url }}">
+                                <span class="user-name-group">
+                                    <span>usergrouptbc</span>
+
+                                </span>
+                                <dl class="user-stats">
+                                    <dt class="user-joined-date"> Joined:
+                                        <dd>{{ comment.created_by.date_joined|date:"F d, Y"  }}</dd>
+                                    </dt>
+                                    <dt class="user-post-count"> Posts:
+                                        <dd>{{ comment.created_by.comments.count }}</dd>
+                                    </dt>                                      
+                                </dl>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-row">
+                                    <div class="content">
+                                        <div id="post_message_{{ comment.pk}}" class="content-message">
+                                            <p>{{ comment.message }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="after-post"></div>   
+                            <div class="clear-post"></div> 
+                            </div>                            
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-controls-footer">
+                                <span class="user-controls-pm">
+                                    <a class="send-pm" href="#">Send PM</a>
+                                </span>  
+                                <span class="user-controls-thread">
+                                    <span class="">
+                                        <a class="post-quote" href="#">Quote</a>
+                                        <span class="seperator">&nbsp;</span>
+                                        <a class="vote-counter" href="#">Vote Count</a>
+                                        <span class="seperator">&nbsp;</span>
+
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+                </ol>
+            </div>
+        </div>
+    <div class="col-md-3">
+            <div class="content-section">
+                <h3>Our Sidebar</h3>
+                <p class='text-muted'>You can put any information here you'd like.
+                <ul class="list-group">
+                <li class="list-group-item list-group-item-light">Latest Posts</li>
+                <li class="list-group-item list-group-item-light">Announcements</li>
+                <li class="list-group-item list-group-item-light">Calendars</li>
+                <li class="list-group-item list-group-item-light">etc</li>
+                </ul>
+                </p>
+            </div>
+    </div>
+    </div>
+
+
+<div class="row pagination">
+
+
+    <div id="testpage" class="col-md-9">
+        <a class="btn btn-outline-primary mb-4 mr-auto" id="reply-button" href="{% url 'thread-new-post' topic.board.pk topic.pk  %}">Reply</a>
+        {% if is_paginated %}
+        {% if page_obj.has_previous %}
+          <a class="btn btn-outline-primary mb-4" href="?page=1">First</a>
+          <a class="btn btn-outline-primary mb-4" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+          {% if page_obj.number == num %}
+            <a class="btn btn-primary mb-4" href="?page={{ num }}">{{ num }}</a>
+          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a class="btn btn-outline-primary mb-4" href="?page={{ num }}">{{ num }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <a class="btn btn-outline-primary mb-4" href="?page={{ page_obj.next_page_number  }}">&raquo;</a>
+          <a class="btn btn-outline-primary mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+
+      {% endif %}
+
+    </div>       
+
+
+</div>
+</div>
+
+
+
+{% endblock content %}

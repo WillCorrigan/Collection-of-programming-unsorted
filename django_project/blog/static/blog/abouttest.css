@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+html   {
+    font-family: 'Montserrat', sans-serif;
+    background: url("/media/mafia.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 1% 1% 1% 1%;
+}
+
+
+
+.navbar{
+
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.nav-links-right{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.fbimg {
+    background-color: white;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+a{
+    padding: 1em 1em;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.test-div-left{
+    display: flex;
+}
+
+.nav-links-left{
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.container-2{
+
+    display: block;
+    overflow: auto;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    padding-top: 2%;
+
+
+}
+.testflex2{
+    background-color: red;
+    color: white;
+    padding-right: 5%;
+}
+
+
+.testflex{
+    background-color: green;
+    color: white;
+    height: 
+}
+
+
+.textbox2{
+
+    background-color: orange;
+    color: white;
+    display: flex;
+    overflow: auto;
+}
+

@@ -1,0 +1,54 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    height: 100%
+}
+
+.bg-steel{
+    background-color: #070c24;
+}
+
+.table .thead-dark th{
+    border-bottom: 1rem solid white;
+    
+}
+
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 3rem;
+  width: 100%;
+  background-color: #070c24;
+  color: white;
+  text-align: center;
+}
+
+#paginated-lol a{
+    text-align: left;
+
+}
+
+#testpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-section{
+    padding-right: 5rem;
+}
+
+.col-md-8, .leftcolumn{
+    width: 75%
+}
+
+.col-md-8, .rightcolumn{
+    width: 25%
+}
+
+td.testwidthtd{
+    width: 0.1rem;
+}
